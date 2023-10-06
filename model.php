@@ -49,14 +49,14 @@ function write_data() {
         $sql = "insert into board
                 (`from`, body, cdate, subject)
                 values
-                (:from, :body, now(), :subject)";
+                (:from, :body, datetime('now'), :subject)";
     }
 	// 修正
     else {
         $sql = "update board set
                 `from` = :from,
                 body = :body,
-                pdate = now(),
+                pdate = datetime('now'),
                 subject = :subject where row_no = :id";
     }
 
