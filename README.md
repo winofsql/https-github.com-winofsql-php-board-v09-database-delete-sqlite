@@ -1,1 +1,3 @@
-# https-github.com-winofsql-php-board-v09-database-delete-sqlite
+# php-board-v09-database-delete
+
+- 削除処理を実装
