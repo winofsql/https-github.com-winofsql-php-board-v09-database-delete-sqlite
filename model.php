@@ -178,7 +178,7 @@ function connectDb(){
     $result = null;
 
     try {
-        $result = new PDO( $GLOBALS["connect_string"], $GLOBALS["user"], $GLOBALS["password"] );
+	$result = new PDO( 'sqlite:../bbs.sqlite3' );
     } 
     catch ( PDOException $e ) {
         $error["db"] = "<div>{$GLOBALS["connect_string"]}, {$GLOBALS["user"]}, {$GLOBALS["password"]}</div>"; 
